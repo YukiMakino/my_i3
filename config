@@ -105,6 +105,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # browsers
 bindsym $mod+Shift+c exec google-chrome
+bindsym $mod+Shift+f exec firefox
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 # bindsym $mod+Print exec scrot
