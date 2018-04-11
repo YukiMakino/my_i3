@@ -109,13 +109,6 @@ bindsym $mod+e exec --no-startup-id thunar
 
 
 #===workspace control===
-
-# Workspace names
-#workspace "1:Arch" output eDP1
-#workspace "2:Web" output eDP1
-#workspace "3:Code" output eDP1
-#workspace "9:Mail" output eDP1
-
 # putting clients on specific workspaces
 #assign [class="Chromium"] 0
 #assign [class="Webstorm"] 0 
@@ -273,9 +266,8 @@ mode "$mode_system" {
 }
 
 # screen off | sleep | shutdown(time unit: seconds)
-#exec --no-startup-id xset dpms 300 1357 6789
-#exec --no-startup-id xset dpms 900 960 14400   
-
+exec --no-startup-id xset -dpms 
+exec --no-startup-id xset s off 
 
 #===manage i3===
 
