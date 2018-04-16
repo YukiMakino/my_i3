@@ -5,28 +5,21 @@
 set $mod Mod1
 
 #===autostart parograms===
-#exec --no-startup-id xcompmgr &
 #exec --no-startup-id mate-power-manager
 #exec --no-startup-id alsactl init
 exec --no-startup-id nm-applet
-# 使用Ubuntu自带的software-center安装.deb包会报"Authentication Error"
-#exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 # 透明度设置
 exec --no-startup-id xcompmgr -c
 exec --no-startup-id /home/fblock/.config/i3/v2ray.sh
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
 #exec --no-startup-id fcitx
 #exec --no-startup-id ibus
-#exec --no-startup-id megasync
-#exec --no-startup-id redshift
 
 #===appearance===
 
 #---wallpaper---
-
 # static mode
 exec --no-startup-id feh --bg-scale "/home/fblock/Pictures/wallpapers/1.jpg" 
-
 # random mode
 #exec ~/.config/i3/wallpaper.sh &
 
@@ -106,7 +99,8 @@ bindsym $mod+Shift+f exec firefox
 
 # GUI file manager
 bindsym $mod+e exec --no-startup-id thunar
-
+# Typora
+bindsym $mod+Shift+t exec typora
 
 #===workspace control===
 # putting clients on specific workspaces
