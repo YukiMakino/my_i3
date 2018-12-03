@@ -1,1 +1,1 @@
-xbacklight -set 40
+xbacklight -set 50

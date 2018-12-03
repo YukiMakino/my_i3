@@ -10,8 +10,10 @@ set $mod Mod1
 exec --no-startup-id nm-applet
 # 透明度设置
 exec --no-startup-id xcompmgr -c
-exec --no-startup-id /home/fblock/.config/i3/v2ray.sh
-#exec --no-startup-id blueman-applet
+#exec --no-startup-id /home/fuu/.config/i3/v2ray.sh  # vpn
+#exec --no-startup-id sudo create_ap wlo1 wlo1 Arch 18180018  # wifi to wifi
+exec --no-startup-id xbacklight -set 60 
+exec --no-startup-id blueman-applet
 #exec --no-startup-id fcitx
 #exec --no-startup-id ibus
 
@@ -19,7 +21,7 @@ exec --no-startup-id /home/fblock/.config/i3/v2ray.sh
 
 #---wallpaper---
 # static mode
-exec --no-startup-id feh --bg-scale "/home/fblock/Pictures/wallpapers/1.jpg" 
+exec --no-startup-id feh --bg-scale "/home/fuu/Pictures/wallpapers/1.jpg" 
 # random mode
 #exec ~/.config/i3/wallpaper.sh &
 
@@ -93,6 +95,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # browsers
 bindsym $mod+Shift+c exec google-chrome
 bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+x exec --no-startup-id xbacklight -set 10
+bindsym $mod+Shift+b exec --no-startup-id xbacklight -set 60
+
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 # bindsym $mod+Print exec scrot
@@ -101,6 +106,8 @@ bindsym $mod+Shift+f exec firefox
 bindsym $mod+e exec --no-startup-id thunar
 # Typora
 bindsym $mod+Shift+t exec typora
+# pavucontrol
+bindsym $mod+Shift+p exec pavucontrol
 
 #===workspace control===
 # putting clients on specific workspaces
@@ -252,7 +259,8 @@ bindsym XF86AudioPrev exec playerctl previous
 set $mode_system select: lock(L) exit(E) reboot(R) poweroff(O) cancel(Esc)
 bindsym $mod+Shift+q mode "$mode_system"
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -c '#333333', mode "default"
+    #bindsym l exec --no-startup-id i3lock -c '#000000', mode "default"
+    bindsym l exec --no-startup-id i3lock -i /home/fuu/.i3/i3lock2.jpg
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym o exec --no-startup-id systemctl poweroff, mode "default"
@@ -273,7 +281,7 @@ bindsym $mod+Shift+s restart
 
 # i3lock
  mode "i3lock: Return to lock/Escape to Cancel" {
-            bindsym Return mode "default" exec i3lock -c '#333333' 
+            bindsym Return mode "default" exec i3lock -c '#000000' 
             bindsym Escape mode "default"
     }
 
