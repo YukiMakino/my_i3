@@ -6,3 +6,6 @@
 
 音量控制：alsamixer
 
+EPUB Reader: Calibr
+Wallpaper Setting: nitrogen
+Disk Partition: gparted
