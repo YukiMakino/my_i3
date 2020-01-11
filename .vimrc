@@ -4,7 +4,7 @@ set mouse=a
 
 " Colors
 " colorscheme badwolf " awesome colorscheme
-colorscheme jellybeans " awesome colorscheme
+" colorscheme jellybeans " awesome colorscheme
 "colorscheme stellarized
 " 设置透明
 "hi! Normal ctermbg=NONE guibg=NONE
@@ -180,15 +180,15 @@ filetype off                  " required
 
 " 启用vundle来管理vim插件
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" call vundle#begin()
 " 安装插件写在这之后
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Plugin 'VundleVim/Vundle.vim'
 
 " a plugin for flod
-Plugin 'tmhedberg/SimpylFold'
-let g:SimpylFold_docstring_preview=1
+"Plugin 'tmhedberg/SimpylFold'
+"let g:SimpylFold_docstring_preview=1
 
 " Code Completed
 " Plugin 'Valloric/YouCompleteMe'
@@ -201,7 +201,7 @@ let g:SimpylFold_docstring_preview=1
 "Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 " 安装插件写在这之前
-call vundle#end()            " required
+"call vundle#end()            " required
 filetype plugin on    " required
 
 " 常用命令
